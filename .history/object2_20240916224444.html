@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        const pro = {
+            name: 'shoe',
+            'price': 50000,
+            rating: {
+                star: 5,
+                count: 100
+            }
+        };
+        console.log(pro);
+        console.log(pro.name);
+        console.log(pro['price']);
+        console.log(pro.rating.count);
+        console.log(JSON.stringify(pro));
+    </script>
+</body>
+</html>

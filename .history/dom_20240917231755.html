@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p>Subscribe Channel</p>
+    <button class="sub-btn" onclick="subscribe();"
+    >Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
+    <input class="js-cost" type="text" placeholder="Cost of order" onkeydown="enterCalculate()">
+    <button onclick="calculateTotal()">Calculate</button>
+    <p class="js-costTotal"></p>
+
+    <script>
+
+        function enterCalculate(){
+            console.log(event.key);
+            if(event.key === 'Enter'){
+                calculateTotal();
+    }
+        }
+        function calculateTotal(){
+            const inputElement = document.querySelector('.js-cost');
+            let cost = Number(inputElement.value);
+            if(cost < 40){
+                cost += 10;
+            }
+            document.querySelector('.js-costTotal').innerHTML = `$${cost}`
+        }
+        function subscribe(){
+            const btnElement = document.querySelector('.sub-btn');
+            if(btnElement.innerText === 'Subscribe' ){
+                btnElement.innerHTML = 'Subscribed';
+            }
+            else{
+                btnElement.innerHTML = 'Subscribe';
+            }
+        }
+    </script>
+</body>
+</html>
