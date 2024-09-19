@@ -6,10 +6,24 @@
     <title>Advanced Function</title>
 </head>
 <body>
+    <button onclick="js-button">Click</button>
     <script>
-        function greeting(){
+     /*    function greeting(){
             console.log('Hello world');
         }
+        greeting();
+
+        setTimeout(function(){
+            console.log('timeout');
+        }, 3000);
+
+        setInterval(function(){  it will keep running a function in the future 
+            console.log('interval');
+        }, 3000);  */   
+
+        const buttonElement = document.querySelector('.js-button');
+
+        buttonElement.addEventListener('click', () => {console.log('click');});
     </script>
 </body>
 </html>
